@@ -1,0 +1,35 @@
+[BOARDVIEW_FILE_HEADER]
+FORMAT=TVW_CAD_DATA
+BOARD=GIGABYTE-GA-H97M-D3H-REV1.0
+REV=1.0
+[COMPONENTS_LIST]
+# ID   Designator  Layer  Pins  X_Coord  Y_Coord  Rotation
+1      CPU1        TOP    1150  5000     6200     0
+2      PCH1        TOP    950   5200     3100     90
+3      DIMM_A1     TOP    240   7800     6500     270
+4      DIMM_A2     TOP    240   8100     6500     270
+5      DIMM_B1     TOP    240   8400     6500     270
+6      DIMM_B2     TOP    240   8700     6500     270
+7      PCIEX16     TOP    164   2100     4200     180
+8      PCIEX4      TOP    98    1500     3200     180
+9      PCI1        TOP    120   900      2200     180
+10     PCI2        TOP    120   300      1200     180
+11     DUAL_BIOS   TOP    8     9100     1500     0
+12     SuperIO     TOP    128   1100     5500     0
+13     PWM_RT8885  TOP    56    4200     7800     45
+14     ATX_12V     TOP    8     3500     8800     0
+15     ATX_24V     TOP    24    9300     5100     90
+16     SATA_0_1    TOP    14    9400     2800     0
+17     SATA_2_3    TOP    14    9400     2400     0
+18     SATA_4_5    TOP    14    9400     2000     0
+19     AUDIO_ALC892 TOP   48    800      1100     0
+20     LAN_RTL8111 TOP    48    1200     8200     180
+[NETS_CONNECTIONS]
+# NetName      Component  Pin  Type
+12V_ATX        ATX_12V    1    POWER
+12V_ATX        PWM_RT8885 12   POWER
+3V_Dual        DUAL_BIOS  8    POWER
+3V_Dual        SuperIO    14   POWER
+GND            CPU1       1    GROUND
+GND            PCH1       1    GROUND
+GND            ATX_24V    15   GROUND
